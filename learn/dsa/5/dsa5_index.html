@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA with PMR</title>
+    <link rel="stylesheet" href="dsa5_style.css">
+    <link rel="stylesheet" href="../../prism/prism.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="../../prism/prism.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="brand">
+            PMR
+        </div>
+        <span class="head">
+            Learn DSA with PMR
+        </span>
+    </nav>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <div class="logo_name">DSA</div>
+                <span class="menu"><i class='bx bx-menu' id="btnMenu"></i></span>
+            </div>
+        </div>
+        <ul class="nav_list">
+            <a href="../1/dsa1_index.html"><li>
+                <span class="topicList">Introduction</span>
+            </li></a>
+            <a href="../2/dsa2_index.html"><li>
+                <span class="topicList">Time Complexcity</span>
+            </li></a>
+            <a href="../3/dsa3_index.html"><li>
+                <span class="topicList">Sorting</span>
+            </li></a>
+            <li>
+                <span class="topicList">Linear Searching</span>
+            </li>
+        
+        </ul>
+    </div>
+
+    <div class="container">
+        
+        <div class="top">
+            <span class="menu"><i class='bx bx-menu' id="btnMenu2"></i></span>
+            <span class="topic">
+                DSA
+            </span>
+        </div>
+        <div class="subtopic">
+            Insertion Sort
+        </div>
+        <div class="content">
+            <div class="quest">
+                Insertion sort is a sorting algortihm in which an unsorted element is placed at it's suitable positon in each iteraton.
+                <div class="answer">
+                    Working of Insertion Sort:
+                    <br>
+                    <ol>
+                        <li>The first element in the array is assumed to be sorted so take the second element of the array and store it separately in <b>current</b>
+                            <br>
+                        Compare <b>current</b> with the first element. If the first element is greater than <b>current</b>, then <b>current</b> is placed in front of the first element.
+                        </li>
+                        <li>Now, the first two elements are sorted. 
+                            <br>
+                            Take the third element and compare it with the elements on the left of it. Placed it just behind the element smaller than it. If there is no element smaller than it, then place it at the beginning of the array.
+                        </li>
+                        <li>
+                            Similarly, place every unsorted element at its correct position.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="algo">
+            <div class="quest">
+                Insertion Sort Algorithm:
+                <div class="answer">
+                    <pre class="language-cpp"><code>for (int i = 1; i &lt; n; i++)
+{
+    int current = arr[i];
+    int j = i - 1;
+    while (arr[j] > current && j >= 0)
+    {
+        arr[j+1] = arr[j];
+        j--;
+    }
+    arr[j+1] = current;
+    
+}</code></pre>
+                </div>
+            </div>
+        </div>
+            
+
+        <div class="btn">
+            <a href="../4/dsa4_index.html"><button class="back">&#8592; Back</button></a>
+            <button class="next">Next &#8594;</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span class="links">
+            <span class="link1"><a href="https://github.com/PMR745" target="_blank"><img src="/img/git.png" alt=""></a></span>
+
+            <span class="link2"><a href="https://www.linkedin.com/in/prathamesh-rajput-b75458218/" target="_blank"><img src="/img/linkedIn.png" alt=""></a></span>
+        </span>
+        <span class="copyright">&#169; PMR</span>
+        <span class="suggest">Suggestions: <br><a href="mailto: pmr745codes@gmail.com">pmr745codes@gmail.com</a></span>
+    </div>
+
+    <script src="../1/script.js"></script>
+</body>
+</html>

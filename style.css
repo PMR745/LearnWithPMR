@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #edeaff;
+    font-size: 35px;
+    background-color: #181824;
+    height: 60px;
+}
+
+.brand {
+    padding-left: 15px;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    width: calc(100% - 35px);
+}
+
+.container {
+    background-color: #2b1a3b;
+    min-height: calc(100vh - 60px);
+}
+
+.row1 {
+    padding-top: 15px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    width: 200px;
+    background-color: #FFF;
+    border: 3px solid black;
+    border-radius: 25px;
+    margin: 10px;
+    transition: all 0.2s ease-in;
+}
+
+.box:hover {
+    /* box-shadow: -8px 8px 2px 2px; */
+    border: 3px solid rgb(8, 123, 238);
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 125px;
+    width: 200px;
+    background-color: #4070F4;
+    border-radius: 25px 25px 0 25px;
+    z-index: 5;
+}
+
+.overlay::before,
+.overlay::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4070F4;
+}
+
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 10px;
+    z-index: 10;
+}
+
+#dsa img {
+    height: 70px;
+}
+
+.img img {
+    height: 80px;
+    
+}
+
+.course_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-top: 10px;
+    font-size: 30px;
+    height: 40px;
+    width: 100px;
+}
+
+.learn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    font-size: 20px;
+    height: 40px;
+    width: 150px;
+    margin-top: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.learn:hover {
+    background-color: rgb(109, 1, 242);
+}
+
+.learn a {
+    text-decoration: none;
+    color: black;
+}
+
+.learn a:hover {
+    color: white;
+}
+
+.footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(57, 56, 56);
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.links {
+    padding-left: 30px;
+}
+
+.links img {
+    height: 35px;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.copyright {
+    font-size: 35px;
+}
+.suggest {
+    padding-right: 30px;
+}
+
+.suggest a {
+    color: white;
+    text-decoration: none;
+}
+
+.suggest a:hover {
+    color: blue;
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        font-size: 25px;
+    }
+    .row1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer {
+        height: 40px;
+        position: relative;
+    }
+    .links {
+        padding-left: 10px;
+    }
+    .links img {
+        height: 30px;
+        padding-left: 2px;
+    }
+    .copyright {
+        font-size: 20px;
+    }
+    .suggest {
+        padding-right: 10px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 600px) {
+    .container {
+        display: absolute;
+    }
+    .box {
+        width: 150px;
+        margin: 2px;
+    }
+    .overlay {
+        width: 150px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    .box {
+        width: 180px;
+        margin: 5px;
+    }
+    .overlay {
+        width: 180px;
+    }
+}
