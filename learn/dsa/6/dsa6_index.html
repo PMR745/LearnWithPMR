@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSA with PMR</title>
-    <link rel="stylesheet" href="dsa5_style.css">
+    <link rel="stylesheet" href="dsa6_style.css">
     <link rel="stylesheet" href="../../prism/prism.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="../../prism/prism.js"></script>
@@ -52,26 +52,26 @@
             </span>
         </div>
         <div class="subtopic">
-            Insertion Sort
+            Selection Sort
         </div>
         <div class="content">
             <div class="quest">
-                Insertion sort is a sorting algortihm in which an unsorted element is placed at it's suitable positon in each iteraton.
+                Selection sort algorithm sorts by repeatedly finding the minimum element from the unsorted array and putting it at the beginning.
                 <div class="answer">
                     Working of Insertion Sort:
                     <br>
-                    <ol>
-                        <li>The first element in the array is assumed to be sorted so take the second element of the array and store it separately in <b>current</b>
-                            <br>
-                        Compare <b>current</b> with the first element. If the first element is greater than <b>current</b>, then <b>current</b> is placed in front of the first element.
-                        </li>
-                        <li>Now, the first two elements are sorted. 
-                            <br>
-                            Take the third element and compare it with the elements on the left of it. Placed it just behind the element smaller than it. If there is no element smaller than it, then place it at the beginning of the array.
+                    <ol>                        
+                        <li>Set the first unsorted element as the minimum</li>
+                        <li>
+                            Traverse the array to find the minimum element in the array.
                         </li>
                         <li>
-                            Similarly, place every unsorted element at its correct position.
+                            While Traversing if any element is smaller than minimum then swap both the values.
                         </li>
+                        <li>
+                            Then increment the minimum value to next element.
+                        </li>
+                        <li>Repeat until the array is sorted.</li>
                     </ol>
                 </div>
             </div>
@@ -81,26 +81,33 @@
             <div class="quest">
                 Insertion Sort Algorithm:
                 <div class="answer">
-                    <pre class="language-cpp"><code>for (int i = 1; i &lt; n; i++)
+                    <pre class="language-cpp"><code>for (int i = 0; i &lt; n-1; i++)
 {
-    int current = arr[i];
-    int j = i - 1;
-    while (arr[j] > current && j >= 0)
+    int min = i;
+    for (int j = i + 1; j &lt; n; j++)
     {
-        arr[j+1] = arr[j];
-        j--;
+        if(arr[j]&lt;arr[min]) {
+            min = j;
+        }
     }
-    arr[j+1] = current;
-    
+    swap(arr[i], arr[min]);
 }</code></pre>
                 </div>
             </div>
         </div>
-            
+
+        <div class="quest">
+            Complexity:
+            <div class="answer">
+                Time Complexity = O(n<sup>2</sup>)
+                <br>
+                Space Complexity = O(1)
+            </div>
+        </div>
 
         <div class="btn">
-            <a href="../4/dsa4_index.html"><button class="back">&#8592; Back</button></a>
-            <a href="../6/dsa6_index.html"><button class="next">Next &#8594;</button></a>
+            <a href="../5/dsa5_index.html"><button class="back">&#8592; Back</button></a>
+            <button class="next">Next &#8594;</button>
         </div>
     </div>
 
