@@ -1,0 +1,183 @@
+<!-- Linear Search -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA with PMR</title>
+    <link rel="stylesheet" href="dsa9_style.css">
+    <link rel="stylesheet" href="../../prism/prism.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="../../prism/prism.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="brand">
+            PMR
+        </div>
+        <span class="head">
+            Learn DSA with PMR
+        </span>
+    </nav>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <div class="logo_name">DSA</div>
+                <span class="menu"><i class='bx bx-menu' id="btnMenu"></i></span>
+            </div>
+        </div>
+        <ul class="nav_list">
+            <a href="../1/dsa1_index.html"><li>
+                <span class="topicList">Introduction</span>
+            </li></a>
+            <a href="../2/dsa2_index.html"><li>
+                <span class="topicList">Time Complexcity</span>
+            </li></a>
+            <a href="../3/dsa3_index.html"><li>
+                <span class="topicList">Sorting</span>
+            </li></a>
+            <li>
+                <span class="topicList">Linear Searching</span>
+            </li>
+        
+        </ul>
+    </div>
+
+    <div class="container">
+        
+        <div class="top">
+            <span class="menu"><i class='bx bx-menu' id="btnMenu2"></i></span>
+            <span class="topic">
+                DSA
+            </span>
+        </div>
+        <div class="subtopic">
+            Linked List
+        </div>
+        <div class="content">
+            <div class="quest">
+                What is Linked List?
+                <div class="answer">
+                    Like array, linked list is a linear data structure. Unlike arrays, linked list elements are not stored at a contiguous location, the elements are linked using pointers. They include a series of connected nodes. Here, each node stores the data and the address of the next node.
+                </div>
+                <br>
+            <div class="quest">
+                Why Linked List?
+                <div class="answer">
+                    Arrays can be used to store linear data of similar types, but array have the following limitaions:
+                    <ul>
+                        <li>
+                            The size of the arrays is fixed.
+                        </li>
+                        <li>
+                            Insertion of a new element/deltion of an existing element is expensive as empty space has to be created or deleted with shifting of elements.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="quest">
+                Structure of a Linked List:
+                <div class="answer">
+                    Every element in a linked list is called a node and consists of two parts, the data part, and the pointer part. The data part stores the values, while the pointer stores the address of the next node.
+                </div>
+            </div>
+            <br>
+            <img src="../img/LinkedList.jpg" alt="" id="LinkedList">
+        </div>
+
+        <div class="algo">
+            <div class="quest">
+                Implementation:
+                <div class="answer">
+                    <ol>
+                        <li>
+                            We construct a structure named Node.
+                        </li>
+                        <li>
+                            Define two of its members, an integer data, which holds the node's data, and a structure pointer next, which points to the address of the next structure node.
+                        </li>
+                    </ol>
+                    <br>
+                    <pre class="language-cpp"><code>struct Node {
+    int data;
+    struct Node *next;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="algo">
+            <div class="quest">
+                Creation of Linked List:
+                <div class="answer">
+                    <ol>
+                        <li>
+                            Creating a Node Structure.
+                        </li>
+                        <li>
+                            In Main Function, initializing the nodes.
+                        </li>
+                        <li>
+                            Allocating Memory to the newly created node.
+                        </li>
+                        <li>
+                            Linking of Nodes.
+                        </li>
+                    </ol>
+                    <br>
+                    <pre class="language-cpp"><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct Node {
+    int data;
+    struct Node *next;
+};
+
+int main() {
+    // Initializing Nodes
+    struct Node *head;
+    struct Node *second;
+    struct Node *third;
+    
+    // Allocate Memory for Nodes
+    head = (struct Node *)malloc(sizeof(struct Node))
+    second = (struct Node *)malloc(sizeof(struct Node))
+    third = (struct Node *)malloc(sizeof(struct Node))
+
+    // Linking first and second node
+    head->data = 7;
+    head->next = second;
+
+    // Linking second and third node
+    second->data = 10;
+    second->next = third;
+
+    // Linking third to Null pointer
+    third->data = 2;
+    third->next = NULL;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn">
+            <a href="../8/dsa8_index.html"><button class="back">&#8592; Back</button></a>
+            <button class="next">Next &#8594;</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span class="links">
+            <span class="link1"><a href="https://github.com/PMR745" target="_blank"><img src="/img/git.png" alt=""></a></span>
+
+            <span class="link2"><a href="https://www.linkedin.com/in/prathamesh-rajput-b75458218/" target="_blank"><img src="/img/linkedIn.png" alt=""></a></span>
+        </span>
+        <span class="copyright">&#169; PMR</span>
+        <span class="suggest">Suggestions: <br><a href="mailto: pmr745codes@gmail.com">pmr745codes@gmail.com</a></span>
+    </div>
+
+    <script src="../1/script.js"></script>
+</body>
+</html>

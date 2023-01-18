@@ -1,4 +1,4 @@
-
+<!-- Linear Search -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSA with PMR</title>
-    <link rel="stylesheet" href="dsa6_style.css">
+    <link rel="stylesheet" href="dsa8_style.css">
     <link rel="stylesheet" href="../../prism/prism.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="../../prism/prism.js"></script>
@@ -53,26 +53,42 @@
             </span>
         </div>
         <div class="subtopic">
-            Selection Sort
+            Binary Search
         </div>
         <div class="content">
             <div class="quest">
-                Selection sort algorithm sorts by repeatedly finding the minimum element from the unsorted array and putting it at the beginning.
+                What is Binary Searching?
                 <div class="answer">
-                    Working of Insertion Sort:
-                    <br>
+                    Binary search is an efficient search algorithm for finding an item from sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until you find the one.
+                </div>
+                <br>
+                <img src="../img/LinearSearch.jpg" alt="" id="linearSearch">
+            </div>
+            <div class="quest">
+                Steps for Binary Search:-
+                <div class="answer">
                     <ol>                        
-                        <li>Set the first unsorted element as the minimum</li>
                         <li>
-                            Traverse the array to find the minimum element in the array.
+                            Sort the array in ascending order.
                         </li>
                         <li>
-                            While Traversing if any element is smaller than minimum then swap both the values.
+                            Set the low index to the first element of the array  and the high index to the last element of the array.
                         </li>
                         <li>
-                            Then increment the minimum value to next element.
+                            Set the middle index to the average of the low and high indices.
                         </li>
-                        <li>Repeat until the array is sorted.</li>
+                        <li>
+                            If the element at the middle index is the key, return the middle index.
+                        </li>
+                        <li>
+                            If the key is less than the middle element, set the high index to the (middle index - 1)
+                        </li>
+                        <li>
+                            If the key is greater than the middle element, set the low index to the (middle index + 1)
+                        </li>
+                        <li>
+                            Repeat steps 3-6 until the element is found.
+                        </li>
                     </ol>
                 </div>
             </div>
@@ -80,18 +96,24 @@
 
         <div class="algo">
             <div class="quest">
-                Insertion Sort Algorithm:
+                Binary Search Algorithm:
                 <div class="answer">
-                    <pre class="language-cpp"><code>for (int i = 0; i &lt; n-1; i++)
-{
-    int min = i;
-    for (int j = i + 1; j &lt; n; j++)
-    {
-        if(arr[j]&lt;arr[min]) {
-            min = j;
+                    <pre class="language-cpp"><code>int binarySearch(int arr[], int n, int key) {
+    int low = 0;
+    int high = n;
+    while(low &lt;= high) {
+        int mid = (low + high)/2;
+        if(arr[mid] == key) {
+            return mid;
+        }
+        else if(arr[mid] > key) {
+            high = mid - 1;
+        }
+        else {
+            low = mid + 1;
         }
     }
-    swap(arr[i], arr[min]);
+    return -1;
 }</code></pre>
                 </div>
             </div>
@@ -100,15 +122,22 @@
         <div class="quest">
             Complexity:
             <div class="answer">
-                Time Complexity = O(n<sup>2</sup>)
+                Time Complexity = O(n)
                 <br>
                 Space Complexity = O(1)
             </div>
         </div>
 
+        <div class="quest">
+            # Note :- 
+            <div class="answer">
+                This search method requires the array to be sorted.
+            </div>
+        </div>
+
         <div class="btn">
-            <a href="../5/dsa5_index.html"><button class="back">&#8592; Back</button></a>
-            <a href="../7/dsa7_index.html"><button class="next">Next &#8594;</button></a>
+            <a href="../7/dsa7_index.html"><button class="back">&#8592; Back</button></a>
+            <a href="../9/dsa9_index.html"><button class="next">Next &#8594;</button></a>
         </div>
     </div>
 

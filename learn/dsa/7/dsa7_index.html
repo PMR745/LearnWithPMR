@@ -1,4 +1,4 @@
-
+<!-- Linear Search -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSA with PMR</title>
-    <link rel="stylesheet" href="dsa6_style.css">
+    <link rel="stylesheet" href="dsa7_style.css">
     <link rel="stylesheet" href="../../prism/prism.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="../../prism/prism.js"></script>
@@ -53,26 +53,38 @@
             </span>
         </div>
         <div class="subtopic">
-            Selection Sort
+            Linear Search
         </div>
         <div class="content">
             <div class="quest">
-                Selection sort algorithm sorts by repeatedly finding the minimum element from the unsorted array and putting it at the beginning.
+                What is Searching? Why do we need it?
                 <div class="answer">
-                    Working of Insertion Sort:
-                    <br>
-                    <ol>                        
-                        <li>Set the first unsorted element as the minimum</li>
-                        <li>
-                            Traverse the array to find the minimum element in the array.
+                    Searching in Data Structures and Algorithm refers to process of finding a specific item or element in a given data structure such as an array or linked list. This can be done using various alogrithms such as linear search, binary search, and hash table search.
+                </div>
+            </div>
+            <div class="quest">
+                What is Linear Searching?
+                <div class="answer">
+                    Linear Search method searches for an element by visiting all the elements sequentially until the element is found or data structure (eg. array) finishes.
+                </div>
+                <br>
+                <img src="../img/LinearSearch.jpg" alt="" id="linearSearch">
+            </div>
+            <div class="quest">
+                Steps for Linear Search:-
+                <div class="answer">
+                    <ol>
+                        <li>Set the first element of the array as the current element.
                         </li>
                         <li>
-                            While Traversing if any element is smaller than minimum then swap both the values.
+                            If the current elment is the key, return its index.
                         </li>
                         <li>
-                            Then increment the minimum value to next element.
+                            If the current element is not the key and if there are more elements in the array then increment the current element and repeat 2nd step.
                         </li>
-                        <li>Repeat until the array is sorted.</li>
+                        <li>
+                            If the current element is not the key and there are no more elements in the array, return -1 to indicate the element was not found.
+                        </li>
                     </ol>
                 </div>
             </div>
@@ -80,18 +92,15 @@
 
         <div class="algo">
             <div class="quest">
-                Insertion Sort Algorithm:
+                Linear Search Algorithm:
                 <div class="answer">
-                    <pre class="language-cpp"><code>for (int i = 0; i &lt; n-1; i++)
-{
-    int min = i;
-    for (int j = i + 1; j &lt; n; j++)
-    {
-        if(arr[j]&lt;arr[min]) {
-            min = j;
+                    <pre class="language-cpp"><code>int linearSearch (int arr[], int size, int key) {
+    for(int i = 0; i &lt; size; i++) {
+        if(arr[i] == key) {
+            return i;
         }
     }
-    swap(arr[i], arr[min]);
+    return -1;
 }</code></pre>
                 </div>
             </div>
@@ -100,15 +109,15 @@
         <div class="quest">
             Complexity:
             <div class="answer">
-                Time Complexity = O(n<sup>2</sup>)
+                Time Complexity = O(n)
                 <br>
                 Space Complexity = O(1)
             </div>
         </div>
 
         <div class="btn">
-            <a href="../5/dsa5_index.html"><button class="back">&#8592; Back</button></a>
-            <a href="../7/dsa7_index.html"><button class="next">Next &#8594;</button></a>
+            <a href="../6/dsa6_index.html"><button class="back">&#8592; Back</button></a>
+            <a href="../8/dsa8_index.html"><button class="next">Next &#8594;</button></a>
         </div>
     </div>
 
