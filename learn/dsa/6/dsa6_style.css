@@ -241,6 +241,12 @@ nav {
     width: 90%;
 }
 
+#home img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
 ul li {
     padding: 10px;
 }

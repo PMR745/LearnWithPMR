@@ -209,6 +209,12 @@ nav {
     z-index: 0;
 }
 
+#home img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
 
 .topic {
     margin: auto;

@@ -235,6 +235,13 @@ nav {
     font-weight: 300;
 }
 
+
+#home img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
 .answer ol {
     padding-left: 25px;
     /* background-color: red; */

@@ -72,6 +72,12 @@ nav {
     font-weight: 400;
 }
 
+#home img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
 .sidebar #btn {
     position: absolute;
     /* background-color: red; */
